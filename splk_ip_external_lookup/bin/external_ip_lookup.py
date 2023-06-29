@@ -10,11 +10,11 @@ from datetime import datetime
 
 ### global variables
 SPLUNK_HOME = os.environ['SPLUNK_HOME']
-lookup_path="/etc/apps/bk_ip_external_lookup/lookups/bk_ip_external_lookup.csv" #python klarer å skjønne forwardslash selv om vi er på windows miljø: os.path.isfile("C:\\Program Files\\Splunk/etc/apps/bk_ip_external_lookup/lookup/bk_ip_external_lookup.csv")
+lookup_path="/etc/apps/splk_ip_external_lookup/lookups/splk_ip_external_lookup.csv" #python klarer å skjønne forwardslash selv om vi er på windows miljø: os.path.isfile("C:\\Program Files\\Splunk/etc/apps/splk_ip_external_lookup/lookup/splk_ip_external_lookup.csv")
 csvFilePath=SPLUNK_HOME+lookup_path
 outputFilePath=SPLUNK_HOME+lookup_path
-# csvFilePath="../lookup/bk_ip_external_lookup.csv"
-# outputFilePath="../lookup/bk_ip_external_lookup.csv"
+# csvFilePath="../lookup/splk_ip_external_lookup.csv"
+# outputFilePath="../lookup/splk_ip_external_lookup.csv"
 now_datetime = datetime.now()
 now_string = now_datetime.strftime("%Y-%m-%dT%H:%M:%S") #not utc offset aware timestamp. timeformat used from splunk lookup: %Y-%m-%dT%H:%M:%S.%f%z. e.g. 2022-01-31T10:25:17.000+0100
 
